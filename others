@@ -11,5 +11,6 @@ pacman -S virtualbox --noconfirm
 
 # make directories 
 mkdir Documents Downloads Music Pictures Videos
+mkdir Documents/gits
 
 
