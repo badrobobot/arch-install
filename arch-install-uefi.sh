@@ -69,7 +69,8 @@ ln -s /usr/share/zoneinfo/America/Mexico_City /etc/localtime
 # generate /etc/adjtime
 hwclock --systohc
 # set initial locale
-locale >/etc/locale.conf
+# locale >/etc/locale.conf
+echo "LANG=en-US.UTF-8" > /etc/locale.conf
 locale-gen
 # (initramfs) no modifications to mkinitcpio.conf should be needed
 mkinitcpio -p linux
