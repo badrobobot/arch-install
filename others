@@ -1,3 +1,8 @@
+# set active ntp 
+timedatectl set-ntp true
+# change time zone 
+ln -sf /usr/share/zoneinfo/America/Mexico_City
+
 # make directories 
 mkdir Documents Downloads Music Pictures Videos
 
