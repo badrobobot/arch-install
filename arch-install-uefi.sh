@@ -46,10 +46,10 @@ rankmirrors -n 6 /etc/pacman.d/mirrorlist.orig >/etc/pacman.d/mirrorlist
 pacman -Syy
 
 # install base packages (take a coffee break if you have slow internet)
-pacstrap /mnt base base-devel vim
+pacstrap /mnt base base-devel vim 
 
-# install syslinux
-arch-chroot /mnt pacman -S grub efibootmgr --noconfirm
+# install grub2 efibootmgr networkmaner
+arch-chroot /mnt pacman -S grub efibootmgr networkmanager --noconfirm
 
 # copy ranked mirrorlist over
 cp /etc/pacman.d/mirrorlist* /mnt/etc/pacman.d
@@ -59,6 +59,8 @@ genfstab -p /mnt >>/mnt/etc/fstab
 
 # chroot
 arch-chroot /mnt /bin/bash <<EOF
+# enable networkmanger
+systemctl enable NetworkManager
 # set initial hostname
 # echo "archlinux-$(date -I)" >/etc/hostname
 echo "pavilon" >/etc/hostname
@@ -84,5 +86,6 @@ EOF
 
 # unmount
 umount -R /mnt
+swapoff -a
 
 echo "Done! Unmount the CD image from the VM, then type 'reboot'."
