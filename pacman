@@ -1,7 +1,9 @@
 # set active ntp 
 timedatectl set-ntp true
 # change time-zone 
+timedatectl set-timezone America/Mexico_City
 ln -sf /usr/share/zoneinfo/America/Mexico_City
+timedatectl 
 
 # install miscellaneous pkg 
 pacman -S pkgfile --noconfirm
@@ -11,14 +13,8 @@ pacman -S net-tools --noconfirm
 pacman -S virtualbox --noconfirm
 pacman -S alsa-utils fftw ncurses alsa-lib iniparser pulseaudio cava --noconfirm
 pacman -S atom --noconfirm
+pacman -S anki --noconfirm
 
-# make directories 
-mkdir ~/Documents 
-mkdir ~/Downloads
-mkdir ~/Music
-mkdir ~/Pictures
-mkdir ~/Videos
-mkdir ~/Documents/gits
-mkdir ~/Documents/yay
+
 
 
