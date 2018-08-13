@@ -55,7 +55,7 @@ arch-chroot /mnt pacman -S grub efibootmgr networkmanager --noconfirm
 cp /etc/pacman.d/mirrorlist* /mnt/etc/pacman.d
 
 # generate fstab
-genfstab -p /mnt >>/mnt/etc/fstab
+genfstab -U /mnt >>/mnt/etc/fstab
 
 # chroot
 arch-chroot /mnt /bin/bash <<EOF
