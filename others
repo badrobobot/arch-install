@@ -6,8 +6,9 @@ ln -sf /usr/share/zoneinfo/America/Mexico_City
 # install miscellaneous pkg 
 pacman -S pkgfile --noconfirm
 pkgfile --update
-pacman -S alsa-utils --noconfirm
+
 pacman -S virtualbox --noconfirm
+pacman -S alsa-utils fftw ncurses alsa-lib iniparser pulseaudio cava --noconfirm
 
 # make directories 
 mkdir Documents Downloads Music Pictures Videos
