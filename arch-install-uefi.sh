@@ -1,4 +1,4 @@
-zozo# confirm you can access the internet
+# confirm you can access the internet
 if [[ ! $(curl -Is http://www.google.com/ | head -n 1) =~ "200 OK" ]]; then
   echo "Your Internet seems broken. Press Ctrl-C to abort or enter to continue."
   read
