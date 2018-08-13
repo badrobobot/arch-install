@@ -72,6 +72,8 @@ hwclock --systohc
 # locale >/etc/locale.conf
 echo "LANG=en-US.UTF-8" > /etc/locale.conf
 locale-gen
+# (if you change your keyboard layout modify vconsole.conf)
+# echo "KEYMAP=be-latin1" > /etc/vconsole.conf
 # (initramfs) no modifications to mkinitcpio.conf should be needed
 mkinitcpio -p linux
 
@@ -79,6 +81,11 @@ mkinitcpio -p linux
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 # Use the grub-mkconfig tool to generate grub.cfg
 grub-mkconfig -o /boot/grub/grub.cfg
+
+
+# (if you are running in virtualbox add next lines to fix reboot error)
+#mkdir /boot/EFI/boot
+#cp /boot/EFI/arch/grubx64.efi /boot/EFI/boot/bootx64.efi
 
 # set root password to "root"
 echo root:root | chpasswd
@@ -88,5 +95,6 @@ EOF
 # unmount
 umount -R /mnt
 swapoff -a
+
 
 echo "Done! Unmount the CD image from the VM, then type 'reboot'."
