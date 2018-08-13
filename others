@@ -7,6 +7,7 @@ ln -sf /usr/share/zoneinfo/America/Mexico_City
 pacman -S pkgfile --noconfirm
 pkgfile --update
 
+pacman -S net-tools --noconfirm
 pacman -S virtualbox --noconfirm
 pacman -S alsa-utils fftw ncurses alsa-lib iniparser pulseaudio cava --noconfirm
 pacman -S atom --noconfirm
