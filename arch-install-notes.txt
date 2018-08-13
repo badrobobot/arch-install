@@ -1,0 +1,12 @@
+# List of possible keyboards 
+find /usr/share/kbd/keymaps/ -type f | more
+
+# Load a keyboard in a terminal (no Xorg)
+loadkeys be-latin1
+
+# verify the boot mode (UEFI )
+# (if you get some lines is possible a UEFI)
+ls /sys/firmware/efi/efivars
+
+# Use fdisk, parted or cfdisk por partitioning
+# Swap must be twice of you RAM size 
