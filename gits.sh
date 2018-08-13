@@ -14,4 +14,8 @@ cd yay
 makepkg -si
 cd ..
 
-
+# downloada pipes
+git clone https://github.com/pipeseroni/pipes.sh.git  ~/Documents/git
+cd pipes.sh
+make install
+cd ..
