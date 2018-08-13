@@ -49,7 +49,7 @@ pacman -Syy
 pacstrap /mnt base base-devel vim 
 
 # install grub2 efibootmgr networkmaner
-arch-chroot /mnt pacman -S grub efibootmgr networkmanager --noconfirm
+arch-chroot /mnt pacman -S grub efibootmgr networkmanager os-prober --noconfirm
 
 # copy ranked mirrorlist over
 cp /etc/pacman.d/mirrorlist* /mnt/etc/pacman.d
@@ -82,10 +82,13 @@ grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 # Use the grub-mkconfig tool to generate grub.cfg
 grub-mkconfig -o /boot/grub/grub.cfg
 
-
 # (if you are running in virtualbox add next lines to fix reboot error)
 #mkdir /boot/EFI/boot
 #cp /boot/EFI/arch/grubx64.efi /boot/EFI/boot/bootx64.efi
+
+# (verify is there is another EFI install in other hard drive and update grub) 
+os-prober
+grub-mkconfig -o /boot/grub/grub.cfg
 
 # set root password to "root"
 echo root:root | chpasswd
