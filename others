@@ -4,7 +4,7 @@ timedatectl set-ntp true
 ln -sf /usr/share/zoneinfo/America/Mexico_City
 
 # install miscellaneous pkg 
-pacman -S pkgfile alsa-utils --noconfirm
+pacman -S pkgfile alsa-utils virtualbox --noconfirm
 pkgfile --update
 
 # make directories 
