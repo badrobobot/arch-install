@@ -17,5 +17,12 @@ cd ..
 # downloada pipes
 git clone https://github.com/pipeseroni/pipes.sh.git  ~/Documents/git
 cd pipes.sh
+make
 make install
 cd ..
+
+git clone https://github.com/xorg62/tty-clock.git  ~/Documents/git
+cd tty-clock
+make
+make install
+cd .. 
