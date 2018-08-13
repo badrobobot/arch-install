@@ -14,6 +14,7 @@ pacman -S virtualbox --noconfirm
 pacman -S alsa-utils fftw ncurses alsa-lib iniparser pulseaudio cava --noconfirm
 pacman -S atom --noconfirm
 pacman -S anki --noconfirm
+pacman -S libreoffice-still --noconfirm
 
 
 
