@@ -4,11 +4,12 @@ timedatectl set-ntp true
 ln -sf /usr/share/zoneinfo/America/Mexico_City
 
 # install miscellaneous pkg 
-pacman -S pkgfile alsa-utils virtualbox --noconfirm
+pacman -S pkgfile --noconfirm
 pkgfile --update
+pacman -S alsa-utils --noconfirm
+pacman -S virtualbox --noconfirm
 
 # make directories 
 mkdir Documents Downloads Music Pictures Videos
 
-# download smithxyz LARBS
-git clone git://github.com/LukeSmithxyz/LARBS.git
+
