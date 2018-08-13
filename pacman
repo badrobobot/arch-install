@@ -13,8 +13,12 @@ pacman -S alsa-utils fftw ncurses alsa-lib iniparser pulseaudio cava --noconfirm
 pacman -S atom --noconfirm
 
 # make directories 
-mkdir Documents Downloads Music Pictures Videos
-mkdir Documents/gits
-mkdir Documents/yay
+mkdir ~/Documents 
+mkdir ~/Downloads
+mkdir ~/Music
+mkdir ~/Pictures
+mkdir ~/Videos
+mkdir ~/Documents/gits
+mkdir ~/Documents/yay
 
 
